@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQv-yX-h6s">
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQv-yX-h6s">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vpR-oV-Iyv">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpR-oV-Iyv">
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <animations/>
                                 <items>
@@ -35,8 +35,19 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vpR-oV-Iyv" firstAttribute="trailing" secondItem="fQv-yX-h6s" secondAttribute="trailing" id="BBY-2o-yb0"/>
+                            <constraint firstItem="vpR-oV-Iyv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="JbD-FL-tFX"/>
+                            <constraint firstAttribute="trailing" secondItem="vpR-oV-Iyv" secondAttribute="trailing" id="UAU-Nr-WH9"/>
+                            <constraint firstItem="vpR-oV-Iyv" firstAttribute="bottom" secondItem="fQv-yX-h6s" secondAttribute="bottom" id="aIa-Xz-GFV"/>
+                            <constraint firstItem="vpR-oV-Iyv" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="fBq-W1-tiu"/>
+                            <constraint firstItem="vpR-oV-Iyv" firstAttribute="leading" secondItem="fQv-yX-h6s" secondAttribute="leading" id="ykc-L9-afz"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="webView" destination="fQv-yX-h6s" id="QyE-W1-9Hl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
