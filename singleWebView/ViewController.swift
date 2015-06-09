@@ -12,6 +12,22 @@ class ViewController: UIViewController {
 
     @IBOutlet var webView: UIWebView!
 
+    @IBAction func doRefresh(AnyObject) {
+        webView.reload()
+    }
+    
+    @IBAction func goBack(AnyObject) {
+        webView.goBack()
+    }
+    
+    @IBAction func goForward(AnyObject) {
+        webView.goForward()
+    }
+    
+    @IBAction func stop(AnyObject) {
+        webView.stopLoading()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
